@@ -1,0 +1,18 @@
+Thread creation
+1. what is Thread?
+2. process vs Thread
+3. context switching
+4. User vs Kernel
+5. how boot up happens
+6. How to priortize the threads
+
+Thread synchronization
+1. Race conditions
+2. critical section
+3. Deadlocks
+4. Semaphores
+5. Conditional variable
+6. Mutex
+7. Atomic variable
+8. Futures and Promises
+=====================================

@@ -1,0 +1,18 @@
+Basics
+1.datatypes
+2.Operators
+3.control statement
+4.functions
+5.Arrays
+6.character Arrays
+7.strings
+
+Advanced
+1.Pointers
+2.DMA 
+3.Storage class
+4.Structure ,Union,typedef,enum
+5. Preprocessor Directives
+6. File handling
+7. Command line arguments
+===================================
