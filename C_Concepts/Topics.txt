@@ -120,3 +120,55 @@ enum (short for enumeration) is a user-defined data type that assigns names to a
 2️⃣typedef
 typedef creates a new name (alias) for existing data types, improving code clarity.
 ============================================================================
+14.types of pointer
+1️⃣ Null Pointer (Safe Pointer)
+A null pointer does not point to any valid memory location.
+ int *ptr = NULL;
+2️⃣ Void Pointer (Generic Pointer)
+A void pointer can store addresses of any data type.
+✅ Useful for dynamic memory allocation and generic programming.
+✅ Needs typecasting before dereferencing.
+ void *ptr = &num;  
+ 3️⃣ Wild Pointer (Uninitialized Pointer)
+A wild pointer points to a random memory address and may cause undefined behavior.
+int *ptr;  // Uninitialized (wild pointer)
+    *ptr = 10;
+4️⃣ Dangling Pointer
+A dangling pointer points to freed or deallocated memory.
+5️⃣ Function Pointer
+A function pointer stores the address of a function and allows calling functions dynamically.
+#include <stdio.h>
+
+void hello() {
+    printf("Hello, World!\n");
+}
+
+int main() {
+    void (*funcPtr)() = hello;  // Function pointer
+    funcPtr();  // Calls hello()
+    return 0;
+}
+6️⃣ Constant Pointer (const Pointer)
+A constant pointer is either:
+1️⃣ A pointer that cannot change the value it points to.
+2️⃣ A pointer that cannot change the address it holds.
+
+#include <stdio.h>
+int main() {
+    int x = 10, y = 20;
+    
+  // Pointer to constant value
+    const int *ptr1 = &x;  
+    // *ptr1 = 20; ❌ Error: Cannot modify value
+    ptr1 = &y;  // ✅ Address can change
+
+    // Constant pointer (fixed address)
+    int *const ptr2 = &x;
+    *ptr2 = 30;  // ✅ Value can change
+    // ptr2 = &y; ❌ Error: Cannot modify address
+
+    return 0;
+}
+7️⃣ Pointers to Structures
+Pointers can store addresses of structures for efficient memory access.
+================================================================
