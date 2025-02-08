@@ -1,0 +1,171 @@
+Process management
+1. Operating system and its types
+2. Process management
+3. CPU Scheduling Algorithms(FCFS,SJF,SRTF)
+4. how to create process
+5. static linking and dynamic linking
+6. How to differentiate parent and child process?
+5. how boot up happens
+
+Signal management
+1. what are Linux commands used?
+2. signal handling
+
+IPC mechanism
+1. Pipes,mkfifo
+2. Shared memory
+3. Message queues
+4. Semaphores
+5. Socket programming
+
+Coding
+---------
+1.IPC mechanism
+  1.socket programming
+  2.Pipes
+
+2.Multithreading 
+  1.Thread 
+  2.Mutex
+================================================
+1. Operating System and Its Types
+An Operating System (OS) is system software that manages hardware and software resources and provides services for applications.
+
+Types of Operating Systems:
+  Real-Time OS (RTOS) – Processes tasks with strict timing constraints (e.g., VxWorks, QNX).
+Distributed OS – Runs on multiple connected machines, appearing as a single system (e.g., Google Cluster OS).
+Embedded OS – Designed for specific hardware, like IoT devices (e.g., FreeRTOS, VxWorks)
+----------------------------------------
+2. How to Create a Process in Linux
+In Linux, processes are created using fork().
+-----------------------------------------
+3. Static Linking vs. Dynamic Linking
+Static Linking: All library code is included in the executable at compile-time.
+🔹 Pro: Faster execution (no dependency on external libraries).
+🔹 Con: Larger executable size.
+Dynamic Linking: Libraries are linked at runtime using lib.so (shared objects).
+🔹 Pro: Saves memory, as multiple programs can use the same shared library.
+🔹 Con: Requires libraries to be available on the system.
+----------------------------------------------
+4. How to Differentiate Parent and Child Process?
+fork() returns:
+> 0 → Parent process (returns child PID).
+= 0 → Child process.
+< 0 → Error in creating a process.
+--------------------------------------------
+5. Boot-up Process (Switch-on to Login Screen)
+When you turn on a computer, the following happens:
+
+Power On – The power supply unit (PSU) supplies power to the motherboard.
+BIOS/UEFI Execution – Firmware initializes hardware and runs a POST (Power-On Self-Test).
+Bootloader (GRUB/LILO) – Loads the OS kernel from disk to RAM.
+Kernel Initialization – Detects hardware, mounts the root file system, and starts the init process.
+Systemd/Init Startup – Loads system services and background processes (daemons).
+Graphical Login (GDM, SDDM) – Finally, the user login screen appears.
+------------------------------------------------------
+6. CPU Scheduling Algorithms
+The OS uses CPU scheduling to efficiently allocate CPU time to processes. The key algorithms include:
+
+1. First Come First Serve (FCFS)
+Non-preemptive (Once a process starts execution, it cannot be stopped until it completes).
+Processes execute in the order they arrive.
+
+2. Shortest Job First (SJF)
+Non-preemptive (Process with shortest burst time executes first).
+More efficient than FCFS but can cause starvation (long processes may wait indefinitely).
+-------------------------------------------------------
+7.linux commands
+1. What are the commonly used Linux commands?
+📌 Interview Answer:
+Linux provides various commands for file management, process control, networking, and system administration. Some commonly used commands include:
+
+File & Directory Management:
+ls – List files in a directory
+cd – Change directory
+mkdir – Create a directory
+rm – Remove files or directories
+cp – Copy files
+
+Process Management:
+ps – View active processes
+top – Display system resource usage
+kill <PID> – Terminate a process
+nohup – Run a process in the background
+
+User & Permission Management:
+whoami – Show current user
+chmod – Change file permissions
+chown – Change file owner
+
+Networking:
+ping – Check network connectivity
+netstat – Display network connections
+ifconfig / ip a – Show IP configuration
+==============================================================
+8. Process management commands
+
+1. Viewing Processes
+ps aux – Show all running processes with details
+top – Display real-time system resource usage
+htop – Interactive process viewer (alternative to top)
+pgrep <process_name> – Find process ID (PID) by name
+
+2. Process Creation
+fork() – System call to create a new process
+exec() – Replaces current process with a new program
+wait() – Waits for a child process to finish
+
+3. Managing Processes
+kill <PID> – Terminate a process by PID
+kill -9 <PID> – Forcefully terminate a process
+pkill <process_name> – Kill process by name
+===============================================================
+9. What is IPC mechanism?
+Inter-Process Communication (IPC) in Linux allows processes to exchange data and synchronize execution.
+The main IPC mechanisms include Pipes, Named Pipes (FIFO), Shared Memory, Message Queues, Semaphores, and Sockets.
+=======================================================================
+10. What is the difference between pipes and named pipes in Linux?
+Pipes (|) are used for communication between related processes (parent-child) and exist only during process execution.
+Named Pipes (FIFO) persist in the filesystem and allow unrelated processes to communicate
+====================================================================
+11. Why is shared memory the fastest IPC mechanism?
+Shared memory allows processes to access the same memory segment directly, avoiding kernel overhead like message copying.
+ It is the fastest IPC mechanism but requires synchronization mechanisms like semaphores to avoid race conditions.
+===============================================================
+12. Message queue
+Message queues are an IPC mechanism where processes send and receive messages using a queue. 
+Unlike shared memory, messages are structured, prioritized, and managed by the kernel, making them more secure but slower.
+===============================================================
+13.Socket programming
+Sockets use IP and port numbers to enable communication between processes on different machines over a network.
+TCP sockets ensure reliable communication, while UDP sockets provide faster, connectionless communication.
+================================================================
+14. Semaphores
+A semaphore is a synchronization mechanism used to control access to shared resources in a multithreaded or multiprocess environment. 
+It prevents race conditions by allowing a limited number of processes/threads to access a resource at the same time.
+===================================================================
+15. Semaphore vs Mutex
+Semaphore
+A counter that controls multiple threads' access to a resource.
+Can be binary (0 or 1) or counting (N resources available).
+No ownership – Any thread can signal (release).
+
+Mutex
+A lock that allows only one thread to access a resource at a time.
+Only binary (locked/unlocked).
+Owned by the thread that locked it (only the owner can unlock).
+=====================================================================
+16. TCP vs UDP
+TCP
+connection oriented
+SOCK_STREAM (Stream-oriented).
+Ensures ordered, error-free data delivery (ACKs, retransmissions).
+Data transfer: Byte stream (continuous data flow).
+Ex: Web browsing, file transfers, email (where reliability is needed).
+
+UDP
+connection less
+SOCK_DGRAM (Datagram-based).
+Datagram-based (packetized, independent messages).
+Ex: VoIP, live streaming, gaming (where speed is crucial).
+=====================================================================

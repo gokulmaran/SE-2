@@ -15,4 +15,108 @@ Advanced
 5. Preprocessor Directives
 6. File handling
 7. Command line arguments
-===================================
+
+Coding
+---------
+1)Using character pointer display the value(output)
+=================================================================
+1. What are tokens in C?
+
+Tokens are identifiers or the smallest single unit in a program that is meaningful to the compiler. In C we have the following tokens:
+
+ There are following 6 types of tokens are available in C:
+Identifiers
+Keywords
+Constants
+Operators
+Special Characters
+Strings
+==========================================================================
+2.What are the stages of compilation in C?
+
+1️⃣ Preprocessing
+The preprocessor (cpp) processes directives like #include, #define, and #ifdef.
+Expands macros, includes header files, and removes comments.
+Generates an expanded source code file (.i or .ii).
+2️⃣ Compilation
+The compiler (gcc or clang) converts the preprocessed code into assembly language (.s file).
+It checks for syntax errors and optimizes code.
+3️⃣ Assembly
+The assembler (as) translates assembly code into machine code (binary instructions).
+Produces an object file (.o or .obj), containing machine code but without linking libraries.
+4️⃣ Linking
+The linker (ld) combines multiple object files (.o), resolves function calls, and links standard libraries (libc).
+Produces the final executable (a.out or program.exe).
+=============================================================================
+3.What are Pointers? 
+Pointers are used to store the address of the variable or a memory location. 
+============================================================
+4. What is the use of printf() and scanf() functions? Also explain format specifiers?
+printf() is used to print the output on the display.
+scanf() is used to read formatted data from the keyboard.
+======================================================
+5. What is the difference between global int and static int declaration?
+The difference between this is in scope. A truly global variable has a global scope and is visible everywhere in your program
+A static variable has a local scope but its variables are not allocated in the stack segment of the memory.
+=====================================================
+6.What is Typecasting?
+Typecasting is the process of converting a variable from one data type to another. 
+In C, there are two types of typecasting:
+1️⃣ Implicit Typecasting (Automatic Conversion)
+🔹 Occurs when assigning a smaller data type to a larger data type.
+2️⃣ Explicit Typecasting (Manual Conversion)
+🔹 Occurs when assigning a larger data type to a smaller data type.
+==============================================================
+7.malloc vs calloc
+calloc() and malloc() are memory dynamic memory allocating functions. The main difference is that malloc() only takes one argument,
+ which is the number of bytes, but calloc() takes two arguments, which are the number of blocks and the size of each block
+===================================================================
+ 8.What is a Dangling Pointer in C?
+ A dangling pointer is a pointer that still points to a memory location that has been freed or deleted,
+ leading to undefined behavior when accessed.
+================================================================
+ 9. What is memory leak?
+ A memory leak occurs when a program allocates memory dynamically but fails to free it, leading to increasing memory usage over time
+==============================================================
+10.Storage class in C?
+1️⃣ auto (Automatic Storage Class)
+🔹 Default storage class for local variables.
+🔹 Memory allocated on stack (fast allocation, but deallocated when function exits).
+2️⃣ extern (External Storage Class)
+🔹 Used for global variables that need to be accessed across multiple files.
+🔹 Declares a variable without allocating memory (memory is allocated where the actual definition exists).
+3️⃣ static (Static Storage Class)
+🔹 Preserves the value of a variable between function calls.
+🔹 By default, static variables are initialized to zero if not explicitly assigned.
+4️⃣ register (Register Storage Class)
+🔹 Requests the compiler to store the variable in a CPU register instead of RAM.
+🔹 Faster access compared to stack variables (used for frequently accessed variables).
+=========================================================================
+11. call by value and call by reference?
+1️⃣ Call by Value (Pass-by-Value)
+🔹 The function gets a copy of the variable, so changes do not affect the original value.
+🔹 Memory is allocated separately for the copied variable.
+2️⃣ Call by Reference (Pass-by-Reference)
+🔹 Instead of passing a copy, the memory address (pointer/reference) is passed to the function.
+🔹 Changes inside the function directly modify the original variable
+===========================================================================
+12. Structure and Union
+1️⃣ Structure in C 
+  A collection of variables stored in separate memory locations
+  Allocates memory for all members separately
+  Sum of all members' sizes
+  All members can be accessed simultaneously
+  Used when all data members need to store values
+2️⃣ Union in C
+  A collection of variables stored in a shared memory location
+  Allocates memory equal to the largest member
+  	Size of the largest member
+    Only one member can hold a value at a time
+    Used when only one value is needed at a time, saving memory
+====================================================================
+13.enum and typedef
+1️⃣enum (Enumeration)
+enum (short for enumeration) is a user-defined data type that assigns names to a set of integer constants.
+2️⃣typedef
+typedef creates a new name (alias) for existing data types, improving code clarity.
+============================================================================

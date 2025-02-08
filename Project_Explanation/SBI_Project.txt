@@ -5,3 +5,5 @@
 
 5)Which feature implementation done on linux device driver?
 6)Whats the hard thing u did debug?
+  Sometimes memory leak happens,will delete the Memory
+  =================================================

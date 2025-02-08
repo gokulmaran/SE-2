@@ -33,41 +33,25 @@ Coding
   2.swap nibbles
 ========================================
 1) Class vs Structure
-S. No.
-
 Class
+Access Specifiers: Members of a class are private by default.
+Usage: Classes are generally used when defining objects that require encapsulation and where private member variables and functions are needed.
+keyword: It is declared using the class keyword.
+Inheritance: Classes support inheritance, allowing one class to be derived from another.
 
 Structure
-
-1
-
-Members of a class are private by default.
-
-Members of a structure are public by default.
-
-2
-
-It is declared using the class keyword.
-
-It is declared using the struct keyword.
-
-3
-
-It is normally used for data abstraction and inheritance.
-
-It is normally used for the grouping of different datatypes.
-
-4
+Access Specifiers: By default, all members of a structure are public unless explicitly specified with public, protected, or private access specifiers.
+Usage:It is normally used for the grouping of different datatypes.
+Inheritance: Structures also support inheritance, but it is less commonly used compared to classes.
+keyword: It is declared using the struct keyword.
 
 Syntax:
-
 class class_name {
 data_member;
 member_function;
 };
 
 Syntax:
-
 struct structure_name {
 structure_member1;
 structure_member2;

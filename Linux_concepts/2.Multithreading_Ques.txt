@@ -3,8 +3,8 @@ Thread creation
 2. process vs Thread
 3. context switching
 4. User vs Kernel
-5. how boot up happens
-6. How to priortize the threads
+5. How to priortize the threads
+6. thread vs mutex 
 
 Thread synchronization
 1. Race conditions
@@ -15,4 +15,102 @@ Thread synchronization
 6. Mutex
 7. Atomic variable
 8. Futures and Promises
+
+Coding
+-------
+1.Multithreading 
+  1.Thread (Read and Write mechanism)
+  2.Mutex
 =====================================
+1) What is a Thread?
+A thread is the smallest unit of execution within a process.
+ A process can have multiple threads that share the same memory space but execute independently.
+-----------------------------------------
+2)Diff between process and thread
+ 1. Definition
+Process: A process is an independent program in execution, with its own resources and memory space.
+Thread: A thread is a lightweight execution unit inside a process that shares memory with other threads.
+📌 Example:
+Process → Running multiple applications like Chrome, VLC, VS Code
+Thread → Each tab in Chrome runs as a separate thread inside the Chrome process
+ 2. Memory
+Process: Each process has its own dedicated memory space (heap, stack, data, and code sections).
+Thread: Threads within the same process share the same memory (heap & global variables) but have separate stacks.
+ 3. Communication
+Process: Uses Inter-Process Communication (IPC) mechanisms like pipes, message queues, and shared memory.
+Thread: Threads communicate easily using shared memory (global/static variables).
+-------------------------------------
+3) What is Context Switching?
+Context switching is the process of saving and restoring the state (registers, stack, etc.) of a thread or process when switching between them. It happens when:
+
+The OS schedules another thread or process.
+A higher-priority thread becomes ready.
+A thread is blocked (e.g., waiting for I/O).
+🔴 Process Context Switch – More expensive (needs to switch memory space).
+🟢 Thread Context Switch – Faster (threads share memory).
+---------------------------------------------
+4)thread vs mutex
+1. Definition
+Thread: A thread is the smallest unit of execution within a process. Multiple threads can run independently inside a process.
+Mutex: A mutex (mutual exclusion) is a synchronization primitive used to prevent race conditions by allowing only one thread to access a critical section at a time.
+📌 Example:
+
+Thread: A web server handling multiple user requests using multiple threads.
+Mutex: Ensuring that two users don’t modify the same database record simultaneously.
+2. Purpose
+Thread: The main purpose of a thread is to perform parallel execution and improve efficiency by utilizing multiple CPU cores.
+Mutex: The main purpose of a mutex is to prevent race conditions when multiple threads access shared resources.
+📌 Example:
+
+Thread Purpose: Running different tasks like image processing and file downloads in parallel.
+Mutex Purpose: Ensuring only one thread updates a shared counter at a time.
+3. Usage
+Thread: Threads are used for performing tasks simultaneously, such as processing user requests in a web application.
+Mutex: Mutex is used when multiple threads need access to shared data but must avoid data corruption due to concurrent access.
+📌 Example:
+
+Thread Usage: A web server where multiple threads handle different client requests.
+Mutex Usage: A banking system ensuring that two transactions don’t modify the same account balance at the same time.
+-------------------------------------------------------------------------------
+5)What is a Kernel?
+The kernel is the core component of an operating system (OS) that manages hardware and software interactions.
+ It acts as a bridge between applications and the hardware, handling resource allocation, process management, and security.
+Types of Kernels
+Monolithic Kernel – The entire OS (drivers, memory, scheduler) runs as a single unit.
+
+🔹 Example: Linux, UNIX
+🔹 Pros: Faster execution
+🔹 Cons: A bug can crash the entire system
+-------------------------------------------------------------------------------
+1) Race conditions 
+    A race condition occurs when two or more threads access shared data concurrently, 
+    and at least one of them modifies the data, leading to unpredictable behavior.
+-------------------------------------------------------------------------------
+2) critical section
+    A critical section is a part of the code that accesses shared resources (e.g., variables, data structures, files) 
+  and must not be executed by more than one thread at the same time.
+-------------------------------------------------------------------------------
+3) Mutex 
+    A mutex (mutual exclusion) is a synchronization primitive used to prevent multiple threads from accessing a shared resource simultaneously. 
+    It ensures that only one thread can enter the critical section at a time, avoiding race conditions and data corruption.
+-------------------------------------------------------------------------------
+4)Conditional variable
+   A conditional variable is used to block a thread until a certain condition is met. 
+   It is often used with a mutex to avoid busy waiting.
+------------------------------------------------------------------------------- 
+5)Deadlocks
+   A deadlock occurs when two or more threads are blocked forever, waiting for each other to release resources.
+-------------------------------------------------------------------------------
+6) Atomic variable
+   Atomic variables in C++ provide a way to perform operations on shared data without using explicit locks (e.g., mutex). 
+   They are part of the <atomic> library and ensure lock-free thread-safe operations
+-------------------------------------------------------------------------------
+7)Semaphores
+   In C++, semaphores are synchronization primitives used to control access to shared resources by multiple threads. 
+   They maintain a counter that allows a specified number of threads to access a resource simultaneously. 
+   Semaphores are particularly useful for managing limited resources or implementing producer-consumer patterns.
+-------------------------------------------------------------------------------
+8) Futures and Promises
+   Promise: An object used to set a value or an exception that will be made available to a future.
+   Future: An object that can retrieve the value or exception set by a promise.
+-------------------------------------------------------------------------------
