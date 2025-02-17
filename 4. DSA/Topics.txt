@@ -146,3 +146,30 @@ Summary topics
 11) Graphs
 12) DP
 ======================================
+Single topic Summary
+Fundamentals 
+Patterns
+Arrays
+Map/Set
+Two pointer
+HashTable
+Prefix sum
+2D arrays
+Strings
+Sliding window
+Sorting
+Binary Search (5)
+Greedy
+Bit masking
+Number theory
+Stack
+Queues
+Heaps
+LinkedList 
+Recursion (5)
+Backtracking 
+Trees
+Trie
+Graph
+DP
+========================================

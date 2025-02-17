@@ -5,6 +5,8 @@ LLD Topics-->(OOPS Coding)(L&T technology)
 2) UML Diagram
 3) SOLID Principles
 4) Design Patterns
+5) Interview questions (from main function)
+   https://leetcode.com/discuss/interview-question/system-design/5328221/Frequently-Asked-Low-Level-Design-(LLD)-Questions/
 ===========================
 Link: https://youtu.be/rliSgjoOFTs?t=0&si=Pxc6PT0n23spPxsH
 

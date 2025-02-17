@@ -1,4 +1,5 @@
 /*Factory pattern 
+
 A Simple Factory is a design pattern that creates objects without exposing the instantiation logic to the client.
 It provides a single point for object creation
 ============================================*/
