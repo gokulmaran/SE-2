@@ -1,4 +1,4 @@
-/*Concept
+/*Concept 
 Here's a State Pattern example in C++ where an object changes its behavior when its internal state changes. 
 We will model a simple turnstile (barrier gate) system with two states: Locked and Unlocked.*/
 #include <iostream>
