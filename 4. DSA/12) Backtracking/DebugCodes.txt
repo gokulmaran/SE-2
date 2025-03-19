@@ -1,0 +1,303 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+//link: https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+
+class Solution {
+public:
+    void find(string digits, vector<string> v, vector<string>& res, string s, int k) {
+        cout << "Call: k=" << k << ", s=\"" << s << "\"" << endl;  // Debug print
+
+        if (k >= digits.size()) {
+            cout << "Base Case Reached: Adding \"" << s << "\" to result" << endl;
+            res.push_back(s);
+            return;
+        }
+        
+        int a = digits[k] - '0';
+        cout << "Processing digit: " << digits[k] << " -> " << v[a] << endl;
+
+        for (int i = 0; i < v[a].size(); i++) {
+            cout << "Appending '" << v[a][i] << "' to s and calling find with k=" << k + 1 << endl;
+            s += v[a][i];
+            find(digits, v, res, s, k + 1);
+            cout << "Backtracking: Removing '" << v[a][i] << "' from s" << endl;
+            s.pop_back();
+        }
+    }
+
+    vector<string> letterCombinations(string digits) {
+        vector<string> res;
+        if (digits.size() == 0) return res;
+        vector<string> v = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        int k = 0;
+        string s = "";
+        cout << "Starting letterCombinations with digits: " << digits << endl;
+        find(digits, v, res, s, k);
+        cout << "Final result: ";
+        for (const string& str : res) cout << str << " ";
+        cout << endl;
+        return res;
+    }
+};
+
+int main() {
+    Solution sol;
+    string digits = "23";
+    sol.letterCombinations(digits);
+    return 0;
+}
+
+============================================================
+link:https://leetcode.com/problems/permutations/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    void backtrack(vector<int>& nums, int i, vector<vector<int>>& ans) {
+        cout << "Entering backtrack with i = " << i << ", Current nums: [ ";
+        for (int num : nums) cout << num << " ";
+        cout << "]" << endl;
+
+        if (i >= nums.size()) {
+            ans.push_back(nums);
+            cout << "Base case reached - New Permutation Added: [ ";
+            for (int num : nums) cout << num << " ";
+            cout << "]" << endl;
+            return;
+        }
+
+        for (int j = i; j < nums.size(); j++) {
+            cout << "Before swap: i = " << i << ", j = " << j << ", nums: [ ";
+            for (int num : nums) cout << num << " ";
+            cout << "]" << endl;
+
+            swap(nums[i], nums[j]); // Swap for permutation
+            cout << "After swap: nums[" << i << "] <-> nums[" << j << "]: [ ";
+            for (int num : nums) cout << num << " ";
+            cout << "]" << endl;
+
+            backtrack(nums, i + 1, ans);
+
+            cout << "Backtracking - Before restoring: nums: [ ";
+            for (int num : nums) cout << num << " ";
+            cout << "]" << endl;
+
+            swap(nums[i], nums[j]); // Swap back to restore original state
+            cout << "After backtrack swap: nums[" << i << "] <-> nums[" << j << "]: [ ";
+            for (int num : nums) cout << num << " ";
+            cout << "]" << endl;
+        }
+
+        cout << "Exiting backtrack with i = " << i << ", nums restored: [ ";
+        for (int num : nums) cout << num << " ";
+        cout << "]" << endl;
+    }
+
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> ans;
+        cout << "Starting permutation generation with initial nums: [ ";
+        for (int num : nums) cout << num << " ";
+        cout << "]" << endl;
+        backtrack(nums, 0, ans);
+        cout << "Permutation generation complete. Total permutations: " << ans.size() << endl;
+        return ans;
+    }
+};
+
+// Main function to test the solution
+int main() {
+    Solution solution;
+    vector<int> nums = {1, 2, 3};
+
+    cout << "Testing with input: [";
+    for (size_t k = 0; k < nums.size(); k++) {
+        cout << (k > 0 ? ", " : "") << nums[k];
+    }
+    cout << "]" << endl;
+
+    vector<vector<int>> result = solution.permute(nums);
+
+    // Print the final result
+    cout << "\nFinal Permutations:" << endl;
+    for (size_t i = 0; i < result.size(); i++) {
+        cout << "Permutation " << i + 1 << ": [";
+        for (size_t j = 0; j < result[i].size(); j++) {
+            cout << (j > 0 ? ", " : "") << result[i][j];
+        }
+        cout << "]" << endl;
+    }
+
+    return 0;
+}
+===============================================================
+Link: https://leetcode.com/problems/subsets-ii/
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+    void subset(int ind, vector<int>& nums, vector<vector<int>>& ans, vector<int>& ds) {
+
+        // Print the current subset before adding it to the answer
+        cout << "Adding subset: [ ";
+        for (int num : ds) cout << num << " ";
+        cout << "]" << endl;
+
+        ans.push_back(ds); // Store the current subset
+
+        for (int i = ind; i < nums.size(); i++) {
+          cout<<"i value: "<<i<<" ,nums value: "<<nums.size()<<endl;
+            if (i != ind && nums[i] == nums[i - 1]) {
+                cout << "Skipping duplicate element: " << nums[i] << " at index " << i << endl;
+                continue; // Skip duplicate elements
+            }
+            ds.push_back(nums[i]); // Choose element
+            cout << "Choosing element: " << nums[i] << " at index " << i << endl;
+
+            subset(i + 1, nums, ans, ds); // Recur for next index
+
+            cout << "Backtracking, removing element: " << ds.back() << " from subset" << endl;
+            ds.pop_back(); // Undo the choice
+        }
+    }
+
+public:
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        vector<vector<int>> ans;
+        vector<int> ds;
+        sort(nums.begin(), nums.end()); // Sort to handle duplicates
+        cout << "Starting subset generation..." << endl;
+        subset(0, nums, ans, ds);
+        return ans;
+    }
+};
+
+// Main function to test the solution
+int main() {
+    Solution solution;
+    vector<int> nums = {1, 2, 2};
+
+    cout << "Testing with input: [";
+    for (size_t k = 0; k < nums.size(); k++) {
+        cout << (k > 0 ? ", " : "") << nums[k];
+    }
+    cout << "]" << endl;
+
+    vector<vector<int>> result = solution.subsetsWithDup(nums);
+
+    // Print the final result
+    cout << "\nFinal Unique Subsets:" << endl;
+    for (size_t i = 0; i < result.size(); i++) {
+        cout << "Subset " << i + 1 << ": [";
+        for (size_t j = 0; j < result[i].size(); j++) {
+            cout << (j > 0 ? ", " : "") << result[i][j];
+        }
+        cout << "]" << endl;
+    }
+
+    return 0;
+}
+===================================================================
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+//link: https://leetcode.com/problems/word-search/description/
+
+class Solution {
+public:
+    bool exist(vector<vector<char>>& board, string word) {
+        int m = board.size();  // number of rows 
+        int n = board[0].size();  // number of columns
+        cout << "Board size: " << m << "x" << n << ", Word to find: " << word << endl;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                cout << "Checking position (" << i << ", " << j << ") with char: " << board[i][j] << endl;
+                if (board[i][j] == word[0] && find(board, i, j, 0, word)) {
+                    cout << "Word found starting at (" << i << ", " << j << ")" << endl;
+                    return true;
+                }
+            }
+        }
+        cout << "Word not found in the board" << endl;
+        return false;
+    }
+    void For_Better_Understanding(int k, int row, int col, vector<vector<char>>& isvisited) {
+        cout << "k: " << k << " row: " << row << " col: " << col << endl;
+        for (auto i : isvisited) {
+            for (auto j : i) {
+                cout << j << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+    bool find(vector<vector<char>>& board, int i, int j, int idx, string& word) {
+        cout << "find: Position (" << i << ", " << j << "), idx = " << idx 
+             << ", current char = " << (idx < word.length() ? word[idx] : '-') << endl;
+
+        // Base case: If we've matched all characters in the word
+        if (idx == word.length()) {
+            cout << "All characters matched!" << endl;
+            return true;
+        }
+
+        // Check bounds and character match
+        if (i < 0 || i >= board.size() || j < 0 || j >= board[0].size() || board[i][j] != word[idx]) {
+            cout << "Invalid position or mismatch at (" << i << ", " << j << ")" << endl;
+            return false;
+        }
+        
+        // Mark current cell as visited
+        char temp = board[i][j];
+        board[i][j] = '*';
+        cout << "Marked (" << i << ", " << j << ") as visited, temp = " << temp << endl;
+        For_Better_Understanding(idx, i, j, board);
+        // Explore all four directions
+        bool found = find(board, i + 1, j, idx + 1, word) ||  // Down
+                     find(board, i - 1, j, idx + 1, word) ||  // Up
+                     find(board, i, j + 1, idx + 1, word) ||  // Right
+                     find(board, i, j - 1, idx + 1, word);    // Left
+
+        // Restore the cell (backtrack)
+        board[i][j] = temp;
+        cout << "Restored (" << i << ", " << j << ") to " << temp << ", found = " << (found ? "true" : "false") << endl;
+         For_Better_Understanding(idx, i, j, board);
+        return found;
+    }
+};
+
+// Main function to test the solution
+int main() {
+    Solution solution;
+
+    // Test case
+    vector<vector<char>> board = {
+        {'A', 'B', 'C', 'E'},
+    {'S', 'F', 'C', 'S'},
+    {'A', 'D', 'E', 'E'}
+    };
+    string word = "SEE";
+
+    // Print the board
+    cout << "Input Board:" << endl;
+    for (const auto& row : board) {
+        for (char c : row) {
+            cout << c << " ";
+        }
+        cout << endl;
+    }
+    cout << "Word to search: " << word << endl;
+
+    // Run the solution
+    bool result = solution.exist(board, word);
+
+    cout << "\nResult: " << (result ? "Word exists" : "Word does not exist") << endl;
+
+    return 0;
+}
+==============================================================

@@ -1,0 +1,446 @@
+Sorting
+
+patterns
+1) for loop outer cnt lines and for loop inner each one works
+2) spaces ,stars and spaces
+3)symmetry (if loop )
+
+
+Greedy
+
+Basics
+Assign Cookies:https://leetcode.com/problems/assign-cookies/description/
+Find Minimum Number of Coins That Make a Change: https://www.geeksforgeeks.org/problems/-minimum-number-of-coins4426/1
+Lemonade Change:https://leetcode.com/problems/lemonade-change/
+Jump Game: https://leetcode.com/problems/jump-game/
+Jump Game II: https://leetcode.com/problems/jump-game-ii/
+Valid Parenthesis String: https://leetcode.com/problems/valid-parenthesis-string/description/
+Minimum Platforms: https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#
+
+-->scheduling problems
+Fractional Knapsack: https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1
+Activity Selection: https://www.geeksforgeeks.org/problems/activity-selection-1587115620/1
+N Meetings in One Room: https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
+
+-->Merge Intervals (4)
+Insert Interval: https://leetcode.com/problems/insert-interval/
+Merge Intervals: https://leetcode.com/problems/merge-intervals/
+Non-Overlapping Intervals: https://leetcode.com/problems/non-overlapping-intervals/
+Minimum Interval to Include Each Query:https://leetcode.com/problems/minimum-interval-to-include-each-query/description/
+
+Heaps
+
+Basics
+ 1.convertmintoMax: https://www.geeksforgeeks.org/problems/convert-min-heap-to-max-heap-1666385109/1
+ 2.DoesArrayRepresntHeap: https://www.geeksforgeeks.org/problems/does-array-represent-heap4345/1
+ 3.Min Heap Implement: https://www.naukri.com/code360/problems/min-heap-implementation_5480527
+ 4.SortfreqChar: https://leetcode.com/problems/sort-characters-by-frequency/
+ 
+Kth elements
+ 1.Kth largest: https://leetcode.com/problems/kth-largest-element-in-an-array/
+ 2.Kth smallest:  https://www.geeksforgeeks.org/problems/kth-smallest-element5635/1
+ 3.MergeKsorted:  https://www.geeksforgeeks.org/problems/merge-k-sorted-arrays/1
+ 4.TopK frequency: https://leetcode.com/problems/top-k-frequent-elements/
+ 5.TopKFreqwords:  https://leetcode.com/problems/top-k-frequent-words/
+ 
+Minimum Number Pattern
+ 1.Min cost of ropes: https://www.geeksforgeeks.org/problems/minimum-cost-of-ropes-1587115620/1
+ 2.Min cost to Hire Workers: https://leetcode.com/problems/minimum-cost-to-hire-k-workers/
+ 3.Task scheduler:  https://leetcode.com/problems/task-scheduler/description/
+ 
+ Two Heap patterns 
+ 1.FindMedianStream: https://www.geeksforgeeks.org/problems/find-median-in-a-stream-1587115620/1
+ 
+
+Queues
+  1.Implement queues: https://www.geeksforgeeks.org/problems/implement-queue-using-array/1
+  2.First Non Repeating char: https://www.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1
+  3.QueueReversal: https://www.geeksforgeeks.org/problems/queue-reversal/1
+  4.Reverse first k ele: https://www.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1
+  
+Deques
+  1.FirstNegative: https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1
+  2.K sized Subarray: https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1
+  3.Sliding window maximum: https://leetcode.com/problems/sliding-window-maximum/
+  
+Stacks
+
+Implementation
+Implement Min Stack: https://leetcode.com/problems/min-stack/
+Implement Stack using Array: https://www.geeksforgeeks.org/problems/implement-stack-using-array/1
+Implement Stack using Queues: https://leetcode.com/problems/implement-stack-using-queues/
+LRU Cache: https://leetcode.com/problems/lru-cache/description/
+
+Stacks Operations
+Valid parenthesis: https://leetcode.com/problems/valid-parentheses/
+Prefix Expressions: https://www.geeksforgeeks.org/problems/prefix-to-postfix-conversion/0
+
+Monotonic Stack
+Daily Temperature: https://leetcode.com/problems/daily-temperatures/
+Largest Rectangle: https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+Next greater element:  https://leetcode.com/problems/next-greater-element-i/description/
+RemoveK digit: https://leetcode.com/problems/remove-k-digits/
+========================================================================
+Linked List
+
+Single/Two pointers
+Array to LL: https://www.geeksforgeeks.org/problems/introduction-to-linked-list/0
+Count nodes: https://www.geeksforgeeks.org/problems/count-nodes-of-linked-list/1
+Insert Node: https://www.geeksforgeeks.org/problems/linked-list-insertion-at-beginning/0
+Delete Node: https://www.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1
+Reverse LL: https://leetcode.com/problems/reverse-linked-list/description/
+Odd even LL: https://leetcode.com/problems/odd-even-linked-list/
+Add2 numbers: https://leetcode.com/problems/add-two-numbers/
+Rotate LL: https://leetcode.com/problems/rotate-list/description/
+
+Slow and fast pointers
+Middle Node: https://leetcode.com/problems/middle-of-the-linked-list/description/
+Delete Middle: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/
+LL cycle: https://leetcode.com/problems/linked-list-cycle/description/
+LL cycle ii: https://leetcode.com/problems/linked-list-cycle-ii/description/
+Palindrome: https://leetcode.com/problems/palindrome-linked-list/
+
+Vector,Map
+Sort LL: https://leetcode.com/problems/sort-list/
+Intersection: https://leetcode.com/problems/intersection-of-two-linked-lists/description/
+Flattening of LL: https://www.geeksforgeeks.org/problems/flattening-a-linked-list/1
+Copy List: https://leetcode.com/problems/copy-list-with-random-pointer/description/
+
+Recursion
+Reverse LL: https://leetcode.com/problems/reverse-linked-list/description/
+Remove Nth from end: https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+Reverse Nodes in k: https://leetcode.com/problems/reverse-nodes-in-k-group/description/
+Merge 2 lists: https://leetcode.com/problems/merge-two-sorted-lists/description/
+
+DLL
+Intro : https://www.geeksforgeeks.org/problems/introduction-to-doubly-linked-list/0
+Insertion DLL: https://www.geeksforgeeks.org/problems/insert-a-node-in-doubly-linked-list/0
+delete a node DLL: https://www.geeksforgeeks.org/problems/delete-node-in-doubly-linked-list/1
+Reverse DLL: https://www.geeksforgeeks.org/problems/reverse-a-doubly-linked-list/1
+Delete All occurences: https://www.geeksforgeeks.org/problems/delete-all-occurrences-of-a-given-key-in-a-doubly-linked-list/1
+Find pairs: https://www.geeksforgeeks.org/problems/find-pairs-with-given-sum-in-doubly-linked-list/1
+Remove duplicates: https://www.geeksforgeeks.org/problems/remove-duplicates-from-a-sorted-doubly-linked-list/0
+
+Number Theory
+
+Divisors
+Prime Factors: https://www.geeksforgeeks.org/problems/prime-factors5052/0
+Print divisors: https://www.geeksforgeeks.org/problems/all-divisors-of-a-number/1
+
+GCD & LCM
+Euclidean Algo: https://www.geeksforgeeks.org/problems/extended-euclidean-algorithm3848/1
+Min Deletions: https://www.codechef.com/problems/RD19?tab=statement
+
+Sieve of Erathonsis
+Count primes: https://leetcode.com/problems/count-primes/
+Prime factorization: https://www.geeksforgeeks.org/problems/prime-factorization-using-sieve/0
+Prime Range: https://www.geeksforgeeks.org/problems/find-prime-numbers-in-a-range4718/1
+
+Bitmanipulation
+Basics
+Intro: https://www.geeksforgeeks.org/problems/bit-manipulation-1666686020/0
+Count set bits: https://www.geeksforgeeks.org/problems/count-total-set-bits-1587115620/1
+Kth bit set or not:  https://www.geeksforgeeks.org/problems/check-whether-k-th-bit-is-set-or-not-1587115620/1
+Odd or even: https://www.geeksforgeeks.org/problems/odd-or-even3618/1
+swap 2 nos: https://www.geeksforgeeks.org/problems/swap-two-numbers3844/1
+
+Advance XOR
+Find XOR:  https://www.geeksforgeeks.org/problems/find-xor-of-numbers-from-l-to-r/1
+Min Bit flips: https://leetcode.com/problems/minimum-bit-flips-to-convert-number/description/
+Single Number: https://leetcode.com/problems/single-number/description/
+Single Number 2: https://www.geeksforgeeks.org/problems/find-element-occuring-once-when-all-other-are-present-thrice/1
+Singel number 3: https://takeuforward.org/plus/data-structures-and-algorithm/bit-manipulation/problems/single-number---iii
+Subsets: https://leetcode.com/problems/subsets/description/
+Two nos with odd occurrences: https://www.geeksforgeeks.org/problems/two-numbers-with-odd-occurrences5846/1
+
+Binary Search
+
+Basics
+Binary Search: https://leetcode.com/problems/binary-search/
+Floor in a : https://www.geeksforgeeks.org/problems/floor-in-a-sorted-array-1587115620/0
+Ceil The Floor: https://www.geeksforgeeks.org/problems/ceil-the-floor2802/0
+First and last position:  https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+Search Insert Position: https://leetcode.com/problems/search-insert-position/description/
+
+BS on Sorted rotated array (Modifed BS)
+Search in rotated array: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+Search in rotated array ii:https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
+Minimum Rotated sorted array: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
+Find Kth Rotation: https://www.geeksforgeeks.org/problems/rotation4723/1
+Single element in Sorted array: https://leetcode.com/problems/single-element-in-a-sorted-array/description/
+Peak element: https://leetcode.com/problems/find-peak-element/description/
+
+BS on 2d arrays
+Row with max 1s: https://www.geeksforgeeks.org/problems/row-with-max-1s0023/1
+Search in 2d array: https://leetcode.com/problems/search-a-2d-matrix/description/
+Search in 2d array ii: https://leetcode.com/problems/search-a-2d-matrix-ii/description/
+Peak element ii:https://leetcode.com/problems/find-a-peak-element-ii/description/
+Matrix median: https://www.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
+
+BS on answers
+Koko eating bananas: https://leetcode.com/problems/koko-eating-bananas/description/
+Kth missing paitve integer:https://leetcode.com/problems/kth-missing-positive-number/description/
+Book allocation: https://www.naukri.com/code360/problems/allocate-books_1090540?utm_source=youtube&utm_medium=affiliate&utm_campaign=codestudio_Striver_BinarySeries
+Split largest sum: https://leetcode.com/problems/split-array-largest-sum/description/
+Median of 2 sorted arrays: https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+K element of 2 sorted arrays: https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1
+
+Sorting
+
+Algos
+
+Bubble sort: https://www.geeksforgeeks.org/problems/bubble-sort/1
+Insertion sort: https://www.geeksforgeeks.org/problems/insertion-sort/1
+Mege sort: https://www.geeksforgeeks.org/problems/merge-sort/1
+Quick sort: https://www.geeksforgeeks.org/problems/quick-sort/1
+Selection sort:  https://www.geeksforgeeks.org/problems/selection-sort/1
+
+Sort & Comp
+
+Arithmetic subarrays: https://leetcode.com/problems/arithmetic-subarrays/
+Find value of partition: https://leetcode.com/problems/find-the-value-of-the-partition/
+Maximum units on a truck: https://leetcode.com/problems/maximum-units-on-a-truck/
+Minimum Balloon to burst: https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/
+Min Swaps: https://www.geeksforgeeks.org/problems/minimum-swaps/1
+
+Merge & Quick problems
+
+Count Inversions: https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1
+Reverse pairs:  https://leetcode.com/problems/reverse-pairs/
+
+Sliding window
+
+Fixed size
+Count distinct: https://www.geeksforgeeks.org/problems/count-distinct-elements-in-every-window/1
+Find all anagrams:https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
+Maximum Average Subarray:  https://leetcode.com/problems/maximum-average-subarray-i/
+Max Sum Subarray with K: https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/description/
+Max vowels:https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
+Permutation in string: https://leetcode.com/problems/permutation-in-string/
+Slding window maximum: leetcode.com/problems/sliding-window-maximum/
+Minimum Window: leetcode.com/problems/minimum-window-substring/
+
+Variable size
+Longest repeating char: leetcode.com/problems/longest-repeating-character-replacement/
+Number of substrings: leetcode.com/problems/number-of-substrings-containing-all-three-characters/
+Max consecutive ones-iii: leetcode.com/problems/max-consecutive-ones-iii/
+subarrays with k different integers: leetcode.com/problems/subarrays-with-k-different-integers/
+longest substring: leetcode.com/problems/longest-substring-without-repeating-characters/
+Maximum points: leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
+Count no of nice subarrays: https://leetcode.com/problems/count-number-of-nice-subarrays/description/
+
+Strings
+
+Basics
+
+Reverse Words: https://leetcode.com/problems/reverse-words-in-a-string/description/
+Reverse only letters: https://leetcode.com/problems/reverse-only-letters/
+Reverse Words string iii: https://leetcode.com/problems/reverse-words-in-a-string-iii/description/
+Rotate string: https://leetcode.com/problems/rotate-string/description/
+Valid anagram:  https://leetcode.com/problems/valid-anagram/
+Palindrome: https://leetcode.com/problems/valid-palindrome/
+
+Parenthesis related
+Maximum Nesting depth: https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/description/
+Mnimum Removal: https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/
+Remove Prenthesis: https://leetcode.com/problems/remove-outermost-parentheses/description/
+
+Substr
+Largest odd number: https://leetcode.com/problems/largest-odd-number-in-string/description/
+Maximum no of occurrences: https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/description/
+
+Pattern matching
+KMP Algo: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
+Rabin karp: https://www.geeksforgeeks.org/problems/search-pattern-rabin-karp-algorithm--141631/1
+Shortest palindrome: https://leetcode.com/problems/shortest-palindrome/description/
+
+2D arrays
+
+Basics:
+Rotate Image: https://leetcode.com/problems/rotate-image/description/
+Diagonal sum: https://leetcode.com/problems/matrix-diagonal-sum/
+Lucky numbers:  https://leetcode.com/problems/lucky-numbers-in-a-matrix/description/
+Modify Matrix:  https://leetcode.com/problems/modify-the-matrix/
+Richest customer: https://leetcode.com/problems/richest-customer-wealth/
+Toeplitz Matrix: https://leetcode.com/problems/toeplitz-matrix/
+Transpose Matrix: https://leetcode.com/problems/transpose-matrix/
+
+Advance (Maps,sets)
+Count sorted arrays: https://www.geeksforgeeks.org/problems/count-sorted-rows2702/1
+Print Matrix diagonal: https://www.geeksforgeeks.org/problems/print-matrix-in-diagonal-pattern/1
+Print matrix in snake pattern: https://www.geeksforgeeks.org/problems/print-matrix-in-snake-pattern-1587115621/1
+Set matrix zeroes: https://leetcode.com/problems/set-matrix-zeroes/description/
+Spiral Matrix: https://leetcode.com/problems/spiral-matrix/
+Sum of ith & jth: https://www.geeksforgeeks.org/problems/sums-of-i-th-row-and-i-th-column3054/1
+
+Two pointers
+
+Variable store
+Remove duplicate: https://www.geeksforgeeks.org/problems/remove-duplicate-elements-from-sorted-array/1
+Remove element: https://leetcode.com/problems/remove-element/description/
+Sort by parity: https://leetcode.com/problems/sort-array-by-parity/description/
+
+2 pointers
+Two sum: https://leetcode.com/problems/two-sum/
+Container with most water: https://leetcode.com/problems/container-with-most-water/description/
+Trapping rain water: https://leetcode.com/problems/trapping-rain-water/description/
+Sum of square numbers: https://leetcode.com/problems/sum-of-square-numbers/description/
+Key Pair:  https://www.geeksforgeeks.org/problems/key-pair5616/1
+Minimize Maximum pair: https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/
+Two sum ii: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
+Valid palindrome ii:  https://leetcode.com/problems/valid-palindrome-ii/
+
+Advance (3 pointers, 2 arrays)
+Intersection of 2 arrays:  https://www.geeksforgeeks.org/problems/intersection-of-two-arrays2404/1
+3sum:  https://leetcode.com/problems/3sum/description/
+Find triplets: https://www.geeksforgeeks.org/problems/find-triplets-with-zero-sum/1
+4 sum: https://leetcode.com/problems/4sum/description/
+3 sum closest: https://leetcode.com/problems/3sum-closest/description/
+
+Prefix sum
+
+Prefix on 1d array
+Prefix score: https://leetcode.com/problems/find-the-score-of-all-prefixes-of-an-array/
+Running sum on 1d array: https://leetcode.com/problems/running-sum-of-1d-array/description/
+Maximum Prefix sum: https://www.geeksforgeeks.org/problems/maximum-prefix-sum-for-a-given-range0227/1
+Subarray sum with k: https://leetcode.com/problems/subarray-sum-equals-k/description/
+Trapping rain water: https://leetcode.com/problems/trapping-rain-water/description/
+Range sum queries: https://leetcode.com/problems/range-sum-query-immutable/description/
+
+Prefix and suffix
+Sum of absolute differences: https://leetcode.com/problems/sum-of-absolute-differences-in-a-sorted-array/description/
+Min average difference: https://leetcode.com/problems/minimum-average-difference/
+left and right sum difference: https://leetcode.com/problems/left-and-right-sum-differences/
+Max product subarray: https://leetcode.com/problems/maximum-product-subarray/description/
+
+Prefix on 2d array
+Range sum: https://leetcode.com/problems/range-sum-query-2d-immutable/description/
+Max sum of rectangle: https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/
+
+Hashtable
+
+Arrays
+Minimum pushes:  https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/description/
+Missing Number: https://leetcode.com/problems/missing-number/description/
+Duplicates: https://leetcode.com/problems/find-all-duplicates-in-an-array/description/
+Set mismatch: https://leetcode.com/problems/set-mismatch/description/
+Intersection of 2 arrays ii: https://leetcode.com/problems/intersection-of-two-arrays-ii/
+
+Strings
+Replace pattern: https://leetcode.com/problems/find-and-replace-pattern/description/
+Isomorphic string: https://leetcode.com/problems/isomorphic-strings/
+
+Maps/Set
+Maps
+No of Good Pairs: https://leetcode.com/problems/number-of-good-pairs/
+Subarray with equal 1's: https://www.geeksforgeeks.org/problems/count-subarrays-with-equal-number-of-1s-and-0s-1587115620/1
+Roman to integer: https://leetcode.com/problems/roman-to-integer/
+Unique email address: https://leetcode.com/problems/unique-email-addresses/
+Zero Sum subarrays: https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
+
+Set
+Difference in 2 arrays: https://leetcode.com/problems/find-the-difference-of-two-arrays/description/
+Find duplicates: https://leetcode.com/problems/find-all-duplicates-in-an-array/description/
+Longest consecutive sequence: https://leetcode.com/problems/longest-consecutive-sequence/description/
+
+Multiset
+Sliding Windoew median: https://leetcode.com/problems/sliding-window-median/
+
+Arrays
+
+Basics
+Largest element: https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0
+Rotate array: https://leetcode.com/problems/rotate-array/description/  
+second largest:  https://www.geeksforgeeks.org/problems/second-largest3735/1
+Next Permutation: https://leetcode.com/problems/next-permutation/description/
+Move zeroes: https://leetcode.com/problems/move-zeroes/description/
+Best time to buy/sell: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+
+Algos
+Kadane's Algo: https://leetcode.com/problems/maximum-subarray/description/
+Moore's Voting Algo: https://leetcode.com/problems/majority-element/description/
+
+Recursion
+Return type
+Factorial: https://www.geeksforgeeks.org/problems/find-all-factorial-numbers-less-than-or-equal-to-n3548/1
+x to pwoer: https://classroom.codingninjas.com/app/classroom/me/18751/content/372776/offering/5270059/problem/1121
+Sum of Array: https://classroom.codingninjas.com/app/classroom/me/18751/content/372776/offering/5270066/problem/1123
+Number of digits: https://classroom.codingninjas.com/app/classroom/me/18751/content/372776/offering/5270061/problem/1175
+Last Index of Array: https://classroom.codingninjas.com/app/classroom/me/18751/content/372776/offering/5270071/problem/1134
+Sum of first N series: https://www.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1
+Pow to n : https://leetcode.com/problems/powx-n/description/
+String To Integer: https://classroom.codingninjas.com/app/classroom/me/18751/content/372777/offering/5270078/problem/40?leftPanelTabValue=PROBLEM
+
+Linear Recursion
+Print Pattern: https://www.geeksforgeeks.org/problems/print-pattern3549/1
+Print 1toN: https://www.geeksforgeeks.org/problems/print-1-to-n-without-using-loops-1587115620/1
+Print N to 1: https://www.geeksforgeeks.org/problems/print-n-to-1-without-loop/1
+Strign to Integer (stoi): https://leetcode.com/problems/string-to-integer-atoi/description/
+Replace pi: https://classroom.codingninjas.com/app/classroom/me/18751/content/372777/offering/5270078/problem/38
+Remove X: https://classroom.codingninjas.com/app/classroom/me/18751/content/372777/offering/5270078/problem/39?leftPanelTabValue=PROBLEM
+Pair Star: https://classroom.codingninjas.com/app/classroom/me/18751/content/372777/offering/5270078/problem/43?leftPanelTabValue=PROBLEM
+Remove duplicates: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270082/problem/91
+Pascal Triangle: https://leetcode.com/problems/pascals-triangle/description/
+Return keypad: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270091/problem/1390
+Return Subset of array: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/179?leftPanelTabValue=PROBLEM
+
+Tree Recursion
+Fibonacci: https://leetcode.com/problems/fibonacci-number/description/
+Tower of Hanoi: https://classroom.codingninjas.com/app/classroom/me/18751/content/372777/offering/5270078/problem/173?leftPanelTabValue=PROBLEM
+Binary Search Recursive: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/177?leftPanelTabValue=PROBLEM
+Get Unique subsets: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/49?leftPanelTabValue=PROBLEM
+Merge Sort: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270084/problem/44
+Quick Sort: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270087/problem/1138
+Check AB: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/55?leftPanelTabValue=PROBLEM
+Staircase: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/846?leftPanelTabValue=PROBLEM
+Print Subset sum to k: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/51?leftPanelTabValue=PROBLEM
+Return Subset sum to K: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/180?leftPanelTabValue=PROBLEM
+Retrun all Codes of k: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/1387?leftPanelTabValue=PROBLEM
+Print all codes: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/1389?leftPanelTabValue=PROBLEM
+
+For loop
+Print keypad: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270094/problem/1392
+Return Permutations: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/1408?leftPanelTabValue=PROBLEM
+Print Permutation: https://classroom.codingninjas.com/app/classroom/me/18751/content/372778/offering/5270096/problem/1409?leftPanelTabValue=PROBLEM
+
+Patterns
+Basics
+N-forest: https://www.naukri.com/code360/problems/n-forest_6570177?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+N/2 forest: https://www.naukri.com/code360/problems/n-2-forest_6570178?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+N triangles: https://www.naukri.com/code360/problems/n-triangles_6573689?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+Seeding: https://www.naukri.com/code360/problems/seeding_6581892?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+Rotated triangle: https://www.naukri.com/code360/problems/rotated-triangle_6573688?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+Binary number triangel: https://www.naukri.com/code360/problems/binary-number-triangle_6581890?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+Alpha triangle: https://www.naukri.com/code360/problems/alpha-triangle_6581429?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+
+With spaces
+Star triangle: https://www.naukri.com/code360/problems/star-triangle_6573671?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+Reverse star triangle: https://www.naukri.com/code360/problems/reverse-star-triangle_6573685?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+Star diamond: https://www.naukri.com/code360/problems/star-diamond_6573686?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems&leftPanelTabValue=PROBLEM
+Number crown: https://www.naukri.com/code360/problems/number-crown_6581894?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+Alpha hill: https://www.naukri.com/code360/problems/alpha-hill_6581921?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+Symmetric void: https://www.naukri.com/code360/problems/symmetric-void_6581919?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+
+if loop
+Ninja and star pattern: https://www.naukri.com/code360/problems/ninja-and-the-star-pattern-i_6581920?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_patternproblems
+
+Fundamentals
+if loop
+find character case: https://classroom.codingninjas.com/app/classroom/me/18752/content/372805/offering/5270464/problem/463?leftPanelTabValue=PROBLEM
+Total salary: https://classroom.codingninjas.com/app/classroom/me/18752/content/372805/offering/5270474/problem/486?leftPanelTabValue=PROBLEM
+
+while loop
+Sum of even numbers till N:https://classroom.codingninjas.com/app/classroom/me/18752/content/372805/offering/5270467/problem/965?leftPanelTabValue=PROBLEM
+Fahrenhiet to celsius: https://classroom.codingninjas.com/app/classroom/me/18752/content/372805/offering/5270468/problem/966?leftPanelTabValue=PROBLEM
+Sum of even and odd: https://classroom.codingninjas.com/app/classroom/me/18752/content/372805/offering/5270474/problem/466?leftPanelTabValue=PROBLEM
+Power of number: https://classroom.codingninjas.com/app/classroom/me/18752/content/372805/offering/5270474/problem/467?leftPanelTabValue=PROBLEM
+Palindrome: https://www.geeksforgeeks.org/problems/palindrome-numbers0942/1
+Armstrong number: https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1?page=1&category=Mathematical&sortBy=submissions
+Reverse digits: https://www.geeksforgeeks.org/problems/reverse-digit0316/1?page=2&category=Mathematical&sortBy=submissions
+
+
+For loop
+Fibonacci number: https://leetcode.com/problems/fibonacci-number/description/
+Prime number: https://www.geeksforgeeks.org/problems/prime-number2314/1?page=1&category=Mathematical&sortBy=submissions
+Prime factors: https://www.geeksforgeeks.org/problems/prime-factors5052/1
+Perfect number: https://www.geeksforgeeks.org/problems/perfect-numbers3207/1

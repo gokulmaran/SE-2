@@ -1,0 +1,239 @@
+1)
+//link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
+#include <iostream>
+using namespace std;
+
+struct TreeNode {
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if (!root) {
+            cout << "Root is NULL, returning NULL" << endl;
+            return NULL;
+        }
+        cout << "Processing node: " << root->val << endl;
+        
+        if (root == p || root == q) {
+            cout << "Node " << root->val << " matches p or q, returning " << root->val << endl;
+            return root;
+        }
+        
+        cout << "Calling left subtree of " << root->val << endl;
+        TreeNode* l = lowestCommonAncestor(root->left, p, q);
+        cout << "Left subtree of " << root->val << " returned " 
+             << (l ? to_string(l->val) : "NULL") << endl;
+        
+        cout << "Calling right subtree of " << root->val << endl;
+        TreeNode* r = lowestCommonAncestor(root->right, p, q);
+        cout << "Right subtree of " << root->val << " returned " 
+             << (r ? to_string(r->val) : "NULL") << endl;
+        
+        if (l && r) {
+            cout << "Both left (" << l->val << ") and right (" << r->val 
+                 << ") found, LCA is " << root->val << endl;
+            return root;
+        }
+        if (l) {
+            cout << "Only left returned " << l->val << ", propagating up" << endl;
+            return l;
+        }
+        if (r) {
+            cout << "Only right returned " << r->val << ", propagating up" << endl;
+            return r;
+        }
+        cout << "Neither left nor right found, returning NULL" << endl;
+        return NULL;
+    }
+};
+
+// Helper function to create a sample tree and return pointers to p and q
+void createSampleTree(TreeNode*& root, TreeNode*& p, TreeNode*& q) {
+    root = new TreeNode(3);
+    root->left = new TreeNode(5);
+    root->right = new TreeNode(1);
+    root->left->left = new TreeNode(6);
+    root->left->right = new TreeNode(2);
+    root->right->left = new TreeNode(0);
+    root->right->right = new TreeNode(8);
+    root->left->right->left = new TreeNode(7);
+    root->left->right->right = new TreeNode(4);
+    
+    p = root->left->right->left;  // p = 7
+    q = root->left->right->right; // q = 4
+}
+
+int main() {
+    TreeNode* root = NULL;
+    TreeNode* p = NULL;
+    TreeNode* q = NULL;
+    
+    // Create the sample tree
+    createSampleTree(root, p, q);
+    
+    cout << "Finding LCA of nodes " << p->val << " and " << q->val << endl;
+    
+    // Create Solution object and find LCA
+    Solution solution;
+    TreeNode* lca = solution.lowestCommonAncestor(root, p, q);
+    
+    // Output the result
+    if (lca) {
+        cout << "Lowest Common Ancestor is: " << lca->val << endl;
+    } else {
+        cout << "No LCA found (NULL returned)" << endl;
+    }
+    
+    // Clean up memory (optional, for completeness)
+    // Note: In a real application, you'd need a proper tree deletion function
+    return 0;
+}
+==============================================================================
+link: https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/
+#include <iostream>
+#include <vector>
+#include <limits.h>
+using namespace std;
+
+/**
+ * Definition for a binary tree node.
+ */
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
+class Solution {
+public:
+    TreeNode* bstFromPreorder(vector<int>& preorder) {
+        int i = 0;
+        cout << "Building BST from preorder: ";
+        for (int val : preorder) cout << val << " ";
+        cout << endl;
+        return build(preorder, i, INT_MAX);
+    }
+
+private:
+    TreeNode* build(vector<int>& preorder, int &i, int bound) {
+        if (i == preorder.size() || preorder[i] > bound) return nullptr;
+
+        TreeNode* root = new TreeNode(preorder[i]);
+        cout << "Creating node: " << preorder[i] << " with bound " << bound << endl;
+        i++;
+
+        cout << "Going left from " << root->val << endl;
+        root->left = build(preorder, i, root->val);
+
+        cout << "Going right from " << root->val << endl;
+        root->right = build(preorder, i, bound);
+
+        return root;
+    }
+};
+
+// Function for in-order traversal (should give sorted order if BST is built correctly)
+void printTree(TreeNode* root) {
+    if (!root) return;
+    printTree(root->left);
+    cout << root->val << " ";
+    printTree(root->right);
+}
+
+int main() {
+    Solution sol;
+
+    // Test case: Preorder input
+    vector<int> preorder = {8, 5, 1, 7, 10, 12};
+
+    // Construct BST
+    TreeNode* root = sol.bstFromPreorder(preorder);
+
+    // Print the tree in in-order (should be sorted)
+    cout << "In-order traversal of BST: ";
+    printTree(root);
+    cout << endl;
+
+    return 0;
+}
+================================================
+//link: https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/description/
+#include <iostream>
+using namespace std;
+
+/**
+ * Definition for a binary tree node.
+ */
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
+
+class Solution {
+public:
+    int sum = 0; // Global sum tracker
+
+    TreeNode* bstToGst(TreeNode* root) {
+        if (!root) return root;
+         cout<<"1. before call root->val: "<<root->val<<endl;
+        bstToGst(root->right); // Process right subtree first
+        cout<<"2. root->val: "<<root->val<<endl;
+        sum += root->val;
+        root->val = sum;
+         cout<<"3. sum="<<sum<<", "<<root->val<<endl;
+        bstToGst(root->left); // Process left subtree
+          cout<<"4. after call root->val: "<<root->val<<endl;
+        return root;
+    }
+};
+
+// Function to print in-order traversal of BST
+void printTree(TreeNode* root) {
+    if (!root) return;
+    printTree(root->left);
+    cout << root->val << " ";
+    printTree(root->right);
+}
+
+// Helper function to insert a node in BST
+TreeNode* insertBST(TreeNode* root, int val) {
+    if (!root) return new TreeNode(val);
+    if (val < root->val) root->left = insertBST(root->left, val);
+    else root->right = insertBST(root->right, val);
+    return root;
+}
+
+int main() {
+    Solution sol;
+
+    // Construct BST from sample values
+    TreeNode* root = nullptr;
+    int values[] = {4, 1, 6, 0, 2, 5, 7, 3, 8};
+    for (int val : values) {
+        root = insertBST(root, val);
+    }
+
+    // Print original BST (in-order)
+    cout << "Original BST (in-order): ";
+    printTree(root);
+    cout << endl;
+
+    // Convert BST to Greater Sum Tree
+    sol.bstToGst(root);
+
+    // Print transformed BST (in-order)
+    cout << "Greater Sum Tree (in-order): ";
+    printTree(root);
+    cout << endl;
+
+    return 0;
+}
+===================================================================
