@@ -1,0 +1,14 @@
+OOPS concepts
+classes and Objects
+   --Constructor
+   --Copy Constructor
+
+Encapsulation (getter and setter)
+     --Bank example
+Inheritance
+     -- Parent child concept
+Polymorphism
+     --Payment mechanism (cash,card)
+Abstraction
+     --Abstract
+     --interface (cannot be instantiated)

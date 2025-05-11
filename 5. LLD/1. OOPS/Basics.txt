@@ -1,0 +1,31 @@
+C++ Basics
+
+Data Types
+   --byte short and long float
+Operators
+   --Arithmetic
+   --Urnary Operators
+   --Relational Operators
+   --Logical Operators
+   --Assignment Operators
+   --Bitwise Operators
+   --Ternary Operators
+Conditional Statements
+   --if else
+   --if else if
+   --nested if else
+   --switch
+Loops
+   --for Loops
+   --while Loops
+   --do while Loops
+Arrays
+   --declaration
+   --for each loop
+   --2D Arrays
+Strings
+   --define
+   --char array to Strings
+   --concatenate,substr
+Exception Handling
+   --try catch
