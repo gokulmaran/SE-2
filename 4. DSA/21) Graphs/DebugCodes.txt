@@ -1,0 +1,119 @@
+//link: https://leetcode.com/problems/rotting-oranges/description/
+
+#include <bits/stdc++.h>
+#include <vector>
+#include <queue>
+using namespace std;
+
+class Solution {
+public:
+    int orangesRotting(vector<vector<int>>& grid) {
+        int m = grid.size();
+        int n = grid[0].size();
+        vector<vector<int>> visited = grid; // Copy grid to track visited/rotten state
+        queue<pair<int, int>> q;
+        int countFreshOrange = 0;
+
+        cout << "Initial grid state:" << endl;
+        printGrid(grid);
+
+        // Find rotten oranges and count fresh oranges
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (visited[i][j] == 2) {
+                    q.push({i, j});
+                    cout << "Found rotten orange at [" << i << "][" << j << "], added to queue" << endl;
+                }
+                if (visited[i][j] == 1) {
+                    countFreshOrange++;
+                    cout << "Found fresh orange at [" << i << "][" << j << "], total fresh: " << countFreshOrange << endl;
+                }
+            }
+        }
+
+        cout << "Initial fresh oranges: " << countFreshOrange << ", Queue size: " << q.size() << endl;
+
+        // Early returns
+        if (countFreshOrange == 0) {
+            cout << "No fresh oranges, returning 0 minutes" << endl;
+            return 0;
+        }
+        if (q.empty()) {
+            cout << "No rotten oranges, returning -1" << endl;
+            return -1;
+        }
+
+        int minutes = -1;
+        vector<pair<int, int>> dirs = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
+
+        // BFS to rot oranges
+        while (!q.empty()) {
+            int size = q.size();
+            cout << "\nMinute " << minutes + 1 << " starting, processing " << size << " rotten oranges" << endl;
+            while (size--) {
+                auto [x, y] = q.front();
+                q.pop();
+                cout << "Processing rotten orange at [" << x << "][" << y << "]" << endl;
+
+                for (auto [dx, dy] : dirs) {
+                    int i = x + dx;
+                    int j = y + dy;
+                    cout << "  Checking direction [" << i << "][" << j << "]";
+                    if (i >= 0 && i < m && j >= 0 && j < n) {
+                        if (visited[i][j] == 1) {
+                            visited[i][j] = 2;
+                            countFreshOrange--;
+                            q.push({i, j});
+                            cout << " - Fresh orange found, now rotten, remaining fresh: " << countFreshOrange << endl;
+                        } else {
+                            cout << " - Not a fresh orange (value: " << visited[i][j] << ")" << endl;
+                        }
+                    } else {
+                        cout << " - Out of bounds" << endl;
+                    }
+                }
+            }
+            minutes++;
+            cout << "After minute " << minutes << ", grid state:" << endl;
+            printGrid(visited);
+            cout << "Remaining fresh oranges: " << countFreshOrange << endl;
+        }
+
+        if (countFreshOrange == 0) {
+            cout << "All oranges rotten, returning " << minutes << " minutes" << endl;
+            return minutes;
+        }
+        cout << "Some fresh oranges remain, returning -1" << endl;
+        return -1;
+    }
+
+private:
+    // Helper function to print the grid
+    void printGrid(vector<vector<int>>& grid) {
+        for (int i = 0; i < grid.size(); i++) {
+            for (int j = 0; j < grid[0].size(); j++) {
+                cout << grid[i][j] << " ";
+            }
+            cout << endl;
+        }
+        cout << "----------------" << endl;
+    }
+};
+
+int main() {
+    Solution solution;
+
+    // Sample grid
+    vector<vector<int>> grid = {
+        {2, 1, 1},
+        {1, 1, 0},
+        {0, 1, 1}
+    };
+
+    cout << "Starting oranges rotting simulation" << endl;
+    int result = solution.orangesRotting(grid);
+    cout << "Final result: " << result << endl;
+
+    return 0;
+}
+===================================================================
